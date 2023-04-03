@@ -25,10 +25,8 @@ const Home = () => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.description}>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas
-        dolorum itaque, doloribus officiis quas ad! Obcaecati molestiae vero
-        velit impedit, veritatis nobis repudiandae ducimus alias voluptatibus
-        quia labore ad asperiores!
+        Bienvenido a muramasa bjj!!!
+        <div className={classes.efecto}>Acá va el efecto loco....</div>
       </div>
       <div className={classes.logo}>{arrayOfImg[imgCounter]}</div>
     </div>
