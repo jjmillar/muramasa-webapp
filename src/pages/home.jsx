@@ -25,8 +25,13 @@ const Home = () => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.description}>
-        Bienvenido a muramasa bjj!!!
-        <div className={classes.efecto}>Acá va el efecto loco....</div>
+        <div className={classes.text}>"LA VERDADERA A VICTORIA ES LA QUE LOGRAS SOBRE TI MISMO."</div>
+        <div className={classes.efecto}>MURAMASA GRAPPLING ARTS</div>
+        <div className={classes.infoWrapper}>
+          <div className={classes.infoCel}>Horarios</div>
+          <div className={classes.infoCel}>Costos</div>
+          <div className={classes.infoCel}>Contacto</div>
+        </div>
       </div>
       <div className={classes.logo}>{arrayOfImg[imgCounter]}</div>
     </div>
