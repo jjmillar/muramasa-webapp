@@ -4,9 +4,10 @@
 
 $itemHeight: 90svh;
 $itemWidth: 50svw;
-$white: hsl(0, 0%, 95%);
+$white: hsl(0, 0%, 90%);
 $black: hsl(0, 0%, 2%);
 $red: hsla(0, 100%, 50%, 0.7);
+$gray: hsl(0, 0%, 70%);
 
 .wrapper {
   height: 100svh;
@@ -19,7 +20,6 @@ $red: hsla(0, 100%, 50%, 0.7);
 }
 
 .description {
-  color: $white;
   height: $itemHeight;
   width: $itemWidth;
   box-sizing: border-box;
@@ -29,6 +29,7 @@ $red: hsla(0, 100%, 50%, 0.7);
 }
 
 .text {
+  color: $white;
   height: 50svh;
   font-family: "Roboto", sans-serif;
   font-size: 50px;
@@ -41,19 +42,14 @@ $red: hsla(0, 100%, 50%, 0.7);
 }
 
 .efecto {
+  margin-top: 20px;
+  color: $gray;
   text-align: left;
   padding-left: 2svw;
   font-family: "Roboto", sans-serif;
   font-size: 50px;
   position: relative;
   z-index: 0;
-}
-
-.infoWrapper {
-  height: 30svh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .infoCelWrapper {
@@ -74,6 +70,7 @@ $red: hsla(0, 100%, 50%, 0.7);
   box-shadow: 0 0 7px 2px $white;
   position: absolute;
   opacity: 0;
+  pointer-events: none;
 
   top: 50%;
   left: 50%;

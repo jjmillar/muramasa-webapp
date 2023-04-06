@@ -29,27 +29,33 @@ const Home = () => {
     <div className={classes.wrapper}>
       <div className={classes.description}>
         <div className={classes.text}>
-          "LA VERDADERA A VICTORIA ES LA QUE LOGRAS SOBRE TI MISMO."
+          "El verdadero propósito de las artes marciales es la lucha contra uno
+          mismo, no contra los demás."
         </div>
         <div className={classes.efecto}>MURAMASA GRAPPLING ARTS</div>
-        <div className={classes.infoWrapper}>
-          <div className={classes.infoCelWrapper}>
-            <div className={classes.infoCel}>
-              Horarios
-              <div className={classes.dropdownMenu}><Horarios/></div>
+
+        <div className={classes.infoCelWrapper}>
+          <div className={classes.infoCel}>
+            Horarios
+            <div className={classes.dropdownMenu}>
+              <Horarios />
             </div>
-            <div className={classes.infoCel}>
-              Costos
-              <div className={classes.dropdownMenu}><Costos/></div>
+          </div>
+          <div className={classes.infoCel}>
+            Costos
+            <div className={classes.dropdownMenu}>
+              <Costos />
             </div>
-            <div className={classes.infoCel}>
-              Contacto
-              <div className={classes.dropdownMenu}><Contacto/></div>
+          </div>
+          <div className={classes.infoCel}>
+            Contacto
+            <div className={classes.dropdownMenu}>
+              <Contacto />
             </div>
           </div>
         </div>
       </div>
-      <div className={classes.logo}>{arrayOfImg[imgCounter]}</div>
+      <div className={classes.logo}>{arrayOfImg[0]}</div>
     </div>
   );
 };
