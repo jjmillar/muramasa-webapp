@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import InvertedLogo from "../assets/invertedLogo";
 import OriginalLogo from "../assets/originalLogo";
+import Horarios from "../components/horarios";
+import Costos from "../components/costos";
+import Contacto from "../components/contacto";
 
 import classes from "./home.module.scss";
 
@@ -25,12 +28,25 @@ const Home = () => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.description}>
-        <div className={classes.text}>"LA VERDADERA A VICTORIA ES LA QUE LOGRAS SOBRE TI MISMO."</div>
+        <div className={classes.text}>
+          "LA VERDADERA A VICTORIA ES LA QUE LOGRAS SOBRE TI MISMO."
+        </div>
         <div className={classes.efecto}>MURAMASA GRAPPLING ARTS</div>
         <div className={classes.infoWrapper}>
-          <div className={classes.infoCel}>Horarios</div>
-          <div className={classes.infoCel}>Costos</div>
-          <div className={classes.infoCel}>Contacto</div>
+          <div className={classes.infoCelWrapper}>
+            <div className={classes.infoCel}>
+              Horarios
+              <div className={classes.dropdownMenu}><Horarios/></div>
+            </div>
+            <div className={classes.infoCel}>
+              Costos
+              <div className={classes.dropdownMenu}><Costos/></div>
+            </div>
+            <div className={classes.infoCel}>
+              Contacto
+              <div className={classes.dropdownMenu}><Contacto/></div>
+            </div>
+          </div>
         </div>
       </div>
       <div className={classes.logo}>{arrayOfImg[imgCounter]}</div>

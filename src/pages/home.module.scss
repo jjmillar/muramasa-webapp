@@ -4,6 +4,9 @@
 
 $itemHeight: 90svh;
 $itemWidth: 50svw;
+$white: hsl(0, 0%, 95%);
+$black: hsl(0, 0%, 2%);
+$red: hsla(0, 100%, 50%, 0.7);
 
 .wrapper {
   height: 100svh;
@@ -16,7 +19,7 @@ $itemWidth: 50svw;
 }
 
 .description {
-  color: hsl(0, 0%, 95%);
+  color: $white;
   height: $itemHeight;
   width: $itemWidth;
   box-sizing: border-box;
@@ -47,12 +50,39 @@ $itemWidth: 50svw;
 }
 
 .infoWrapper {
+  height: 30svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.infoCelWrapper {
   padding: 10px 10px;
+  width: 40svw;
   height: 30svh;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.dropdownMenu {
+  padding: 10px;
+  background-color: $black;
+  opacity: 0.9;
+  border-radius: 8px;
+  box-shadow: 0 0 7px 2px $white;
+  position: absolute;
+  opacity: 0;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+
+  text-align: left;
+  color: $white;
 }
 
 .infoCel {
@@ -61,7 +91,7 @@ $itemWidth: 50svw;
   height: 5svh;
   width: 12svw;
   box-sizing: border-box;
-  border: 1px solid gray;
+  border: 1px solid $black;
   border-radius: 8px;
 
   display: flex;
@@ -70,7 +100,12 @@ $itemWidth: 50svw;
 }
 
 .infoCel:hover {
-  box-shadow: 5px;
+  box-shadow: 0 0 7px 2px $white;
+  cursor: default;
+}
+
+.infoCel:hover .dropdownMenu {
+  opacity: 0.92;
 }
 
 .logo {
@@ -102,7 +137,7 @@ $itemWidth: 50svw;
   bottom: 0;
   left: 0;
   inset: 0 0 0 0;
-  background: hsla(0, 100%, 50%, 0.7);
+  background: $red;
   z-index: -1;
   transition: transform 0.3s ease;
 }
