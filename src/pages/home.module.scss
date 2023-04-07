@@ -54,7 +54,7 @@ $gray: hsl(0, 0%, 70%);
 
 .infoCelWrapper {
   padding: 10px 10px;
-  width: 40svw;
+  width: 50svw;
   height: 30svh;
   display: flex;
   flex-direction: row;
@@ -138,3 +138,67 @@ $gray: hsl(0, 0%, 70%);
   z-index: -1;
   transition: transform 0.3s ease;
 }
+
+@media screen and (max-width: 800px) {
+  .logo {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    height: 100svh;
+    width: 95svw;
+    opacity: 0.2;
+    display: none;
+  }
+
+  .description {
+    margin: 0;
+    padding: 10px;
+    width: 100svw;
+    height: 100svh;
+    box-sizing: border-box;
+  }
+
+  .description:last-child {
+    text-align: center;
+  }
+
+  .text {
+    margin: 0;
+    padding: 0;
+    color: $white;
+    height: 50svh;
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    font-style: italic;
+    
+    display: flex;
+    text-align: left;
+    align-items: center;
+  }
+
+  .infoCelWrapper {
+    margin: 0;
+    padding: 0;
+    width: 95svw;
+    height: 30svh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+
+  .infoCel {
+    font-family: 'Nunito', sans-serif;
+    font-size: 3svh;
+    height: 5svh;
+    width: 30svw;
+    box-sizing: border-box;
+  }
+
+  .efecto {
+    font-size: 50px;
+    padding: 0;
+  }
+} 
