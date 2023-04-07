@@ -188,7 +188,6 @@ $gray: hsl(0, 0%, 70%);
     align-items: center;
   }
   
-
   .infoCel {
     font-family: 'Nunito', sans-serif;
     font-size: 3svh;
@@ -200,5 +199,10 @@ $gray: hsl(0, 0%, 70%);
   .efecto {
     font-size: 50px;
     padding: 0;
+  }
+
+  .dropdownMenu {
+    width: 70svw;
+    font-size: 5svw;
   }
 } 
