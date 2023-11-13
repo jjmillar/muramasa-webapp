@@ -40,9 +40,11 @@ const Home = () => {
       <div className={classes.logo}>
         <InvertedLogo />
       </div>
+      {/*
       <div>
         <IG />
       </div>
+      */}
     </div>
   );
 };
