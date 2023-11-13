@@ -4,6 +4,7 @@ import Horarios from "../components/horarios";
 import Costos from "../components/costos";
 import Contacto from "../components/contacto";
 import Text from "../components/text";
+import IG from "../components/ig";
 
 import classes from "./home.module.scss";
 
@@ -38,6 +39,9 @@ const Home = () => {
       </div>
       <div className={classes.logo}>
         <InvertedLogo />
+      </div>
+      <div>
+        <IG />
       </div>
     </div>
   );

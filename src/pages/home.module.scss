@@ -69,6 +69,7 @@ $gray: hsl(0, 0%, 70%);
   border-radius: 8px;
   box-shadow: 0 0 7px 2px $white;
   position: absolute;
+  z-index: 2;
   opacity: 0;
   pointer-events: none;
 
@@ -205,4 +206,4 @@ $gray: hsl(0, 0%, 70%);
     width: 70svw;
     font-size: 5svw;
   }
-} 
+}
