@@ -10,7 +10,7 @@ header {
 .hero {
   & .Typewriter {
     height: calc(var(--p-font-size) * 4);
-    font-size: var(--font-size);
+    font-size: var(--p-font-size);
     align-content: center;
   }
 
@@ -22,7 +22,6 @@ header {
     justify-content: space-around;
 
     & .hero__btn {
-      padding: 5px;
       display: inline-flex;
       align-items: center;
       
@@ -47,6 +46,7 @@ header {
   gap: 1rem;
 
   & .programs__card {
+    font-size: var(--p-font-size);
     aspect-ratio: 1/0.5;
     display: flex;
     align-items: center;
@@ -60,10 +60,6 @@ header {
   & .ready__p {
     font-size: var(--p-font-size);
     padding: 1rem 0;
-  }
-
-  & .ready__btn {
-    padding: 0.5rem;
   }
 }
 
@@ -83,7 +79,7 @@ header {
 
 .contact-us__wrapper {
   margin-bottom: var(--padding-top-bottom);
-  padding: var(--padding-top-bottom) 0;
+  padding: var(--padding-top-bottom);
   text-align: center;
 
   display: grid;
@@ -96,6 +92,16 @@ header {
   & * {
     padding: 2px 0;
     font-size: var(--p-font-size);
+  }
+
+  & .contact-us__btn {
+    border: none;
+    background: none;
+    color: var(--clr-text);
+  }
+
+  & .md{
+    font-size: 1.8rem;
   }
 }
 

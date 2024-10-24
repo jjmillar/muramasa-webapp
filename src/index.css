@@ -1,14 +1,14 @@
 
 /* Variables */
 :root {
-  --p-font-size: 1.1rem;
+  --p-font-size: 1.2rem;
   --border-radius: 15px;
   --padding-top-bottom: 1rem;
   --gap: 10px;
 
-  --clr-bg: #343a40;
-  --clr-secondary: #495057;
-  --clr-text: #f8f9fa;
+  --clr-bg: hsl(210, 11%, 15%);
+  --clr-secondary: hsl(210, 10%, 23%);
+  --clr-text: hsl(210, 17%, 98%);
 }
 
 /* Global styles */
@@ -21,12 +21,14 @@ body {
 }
 
 h1 {
-  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: bold;
 }
 
 h2 {
-  font-size: clamp(1.25rem, 4vw, 2.5rem);
-  padding: 1rem 0;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: bold;
+  padding: var(--padding-top-bottom) 0;
   text-align: center;
 }
 
@@ -35,6 +37,15 @@ h2 {
 .card {
   background: var(--clr-secondary);
   border-radius: var(--border-radius);
+}
+
+.btn {
+  padding: calc(var(--padding-top-bottom) *0.7);
+  border: none;
+  border-radius: var(--border-radius);
+  background: var(--clr-secondary);
+  color: var(--clr-text);
+  font-size: calc(var(--p-font-size) * 0.9);
 }
 
 /* CSS RESET */
