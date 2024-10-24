@@ -32,6 +32,10 @@ h2 {
   text-align: center;
 }
 
+button {
+  cursor: pointer;
+}
+
 /* UTILITY CLASSES */
 
 .card {
@@ -46,6 +50,11 @@ h2 {
   background: var(--clr-secondary);
   color: var(--clr-text);
   font-size: calc(var(--p-font-size) * 0.9);
+}
+
+.btn--white {
+  background: var(--clr-text);
+  color: var(--clr-bg);
 }
 
 /* CSS RESET */

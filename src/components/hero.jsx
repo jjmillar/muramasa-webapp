@@ -20,7 +20,7 @@ const HeroSection = () => {
           <ion-icon name='call-outline' />
           <p className='hero__btn__text'>Llama ahora</p>
         </button>
-        <button type='button' className='hero__btn btn' onClick={openCalendar}>
+        <button type='button' className='hero__btn btn btn--white' onClick={openCalendar}>
           <ion-icon name='calendar-number-outline' />
           <p className='hero__btn__text'>Agenda una clase gratis</p>
         </button>
