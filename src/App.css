@@ -4,7 +4,6 @@ header {
 
   & h1 {
     text-align: center;
-    background-color: red;
   }
 }
 
@@ -35,7 +34,8 @@ header {
 }
 
 .swiper {
-  border-radius: 15px;
+  margin: var(--padding-top-bottom) 0;
+  border-radius: var(--border-radius);
 }
 
 .programs__wrapper {
@@ -68,10 +68,12 @@ header {
 }
 
 .schedule__wrapper {
+  padding: var(--padding-top-bottom) 0;
   text-align: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  gap: var(--gap);
   
   & .schedule__p {
     font-size: var(--p-font-size);
@@ -80,10 +82,14 @@ header {
 }
 
 .contact-us__wrapper {
+  margin-bottom: var(--padding-top-bottom);
+  padding: var(--padding-top-bottom) 0;
   text-align: center;
+
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: 1fr 1fr;
+  gap: var(--gap);
   justify-content: center;
   align-items: center;
 
@@ -94,6 +100,7 @@ header {
 }
 
 nav {
+  margin-bottom: var(--padding-top-bottom);
   width: 100%;
   display: inline-flex;
   justify-content: space-evenly;
@@ -103,10 +110,16 @@ nav {
     
     width: var(--ico-nav-size);
     height: var(--ico-nav-size);
+    color: var(--clr-text);
 
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  & .navbar__btn {
+    border: none;
+    background: none;
   }
 }
 

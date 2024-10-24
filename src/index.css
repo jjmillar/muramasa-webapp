@@ -2,6 +2,13 @@
 /* Variables */
 :root {
   --p-font-size: 1.1rem;
+  --border-radius: 15px;
+  --padding-top-bottom: 1rem;
+  --gap: 10px;
+
+  --clr-bg: #343a40;
+  --clr-secondary: #495057;
+  --clr-text: #f8f9fa;
 }
 
 /* Global styles */
@@ -9,6 +16,8 @@
 body {
   font-family: poppins, sans-serif;
   padding: 0.5rem;
+  background: var(--clr-bg);
+  color: var(--clr-text);
 }
 
 h1 {
@@ -21,12 +30,19 @@ h2 {
   text-align: center;
 }
 
+/* UTILITY CLASSES */
+
+.card {
+  background: var(--clr-secondary);
+  border-radius: var(--border-radius);
+}
+
 /* CSS RESET */
 *, *::before, *::after {
   box-sizing: border-box;
   position: relative;
   min-width: 0;
-  outline: 1px solid lime;
+ /*outline: 1px solid lime;*/
 }
 
 * {
