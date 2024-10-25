@@ -1,3 +1,5 @@
+/* Mobile first design */
+
 header {
   padding: 1rem 0;
   align-content: center;
@@ -43,7 +45,7 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 1rem;
+  gap: var(--gap);
 
   & .programs__card {
     font-size: var(--p-font-size);
@@ -77,14 +79,17 @@ header {
   }
 }
 
+.contact-us {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
 .contact-us__wrapper {
-  margin-bottom: var(--padding-top-bottom);
   padding: var(--padding-top-bottom);
   text-align: center;
 
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-rows: 1fr 1fr;
   gap: var(--gap);
   justify-content: center;
   align-items: center;
@@ -106,7 +111,7 @@ header {
 }
 
 nav {
-  margin-bottom: var(--padding-top-bottom);
+  margin: var(--padding-top-bottom) 0;
   width: 100%;
   display: inline-flex;
   justify-content: space-evenly;
@@ -131,4 +136,74 @@ nav {
 
 footer {
   text-align: center;
+}
+
+/* Tablet responsive media query */
+
+@media (width >= 768px) {
+
+  .main {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    column-gap: var(--gap);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'hero carousel'
+                         'programs programs'
+                         'ready ready'
+                         'schedule contact-us';
+
+    & .hero {
+      grid-area: hero;
+
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      gap: var(--gap);
+      align-items: center;
+
+      & .hero__btn__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: calc(var(--gap) * 2);
+        align-items: center;
+
+        & .hero__btn {
+          width: 70%;
+          justify-content: center;
+        }
+
+      }
+
+    }
+
+    & .carousel {
+      max-width: 80%;
+      grid-area: carousel;
+    }
+
+    & .programs {
+      grid-area: programs;
+    }
+
+    & .ready {
+      grid-area: ready;
+    } 
+
+    & .schedule {
+      grid-area: schedule;
+    }
+
+    & .contact-us {
+      grid-area: contact-us;
+    }
+  }
+}
+
+/* Desktop responsive media query */
+
+@media (width >= 1024px) {
+  .programs__wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
 }

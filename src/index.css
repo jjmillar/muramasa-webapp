@@ -1,10 +1,10 @@
-
 /* Variables */
+
 :root {
-  --p-font-size: 1.2rem;
+  --p-font-size: clamp(1.2rem, 5vw, 1.5rem);
   --border-radius: 15px;
   --padding-top-bottom: 1rem;
-  --gap: 10px;
+  --gap: 1rem;
 
   --clr-bg: hsl(210, 11%, 15%);
   --clr-secondary: hsl(210, 10%, 23%);
