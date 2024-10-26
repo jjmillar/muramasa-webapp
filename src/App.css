@@ -144,10 +144,11 @@ footer {
 
   .main {
     display: grid;
-    justify-items: center;
-    align-items: center;
+    justify-items: stretch;
+    align-items: stretch;
     column-gap: var(--gap);
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
     grid-template-areas: 'hero carousel'
                          'programs programs'
                          'ready ready'
@@ -155,11 +156,11 @@ footer {
 
     & .hero {
       grid-area: hero;
+      place-self: stretch stretch;
 
-      display: grid;
-      grid-template-rows: repeat(3, 1fr);
-      gap: var(--gap);
-      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
 
       & .hero__btn__wrapper {
         display: flex;
@@ -177,7 +178,7 @@ footer {
     }
 
     & .carousel {
-      max-width: 80%;
+      align-self: center;
       grid-area: carousel;
     }
 
