@@ -147,8 +147,7 @@ footer {
 
   .main {
     display: grid;
-    justify-items: stretch;
-    align-items: stretch;
+    place-items: stretch;
     column-gap: var(--gap);
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'hero carousel'
