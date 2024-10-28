@@ -20,11 +20,14 @@ header {
     width: 100%;
     padding: 0.5rem 0;
 
-    display: inline-flex;
-    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: calc(var(--gap) * 2);
 
     & .hero__btn {
       display: inline-flex;
+      justify-content: center;
       align-items: center;
       
       & ion-icon {
@@ -148,7 +151,6 @@ footer {
     align-items: stretch;
     column-gap: var(--gap);
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, auto);
     grid-template-areas: 'hero carousel'
                          'programs programs'
                          'ready ready'
@@ -163,9 +165,6 @@ footer {
       justify-content: space-evenly;
 
       & .hero__btn__wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: calc(var(--gap) * 2);
         align-items: center;
 
         & .hero__btn {
