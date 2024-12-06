@@ -1,4 +1,4 @@
-import { call, openCalendar } from '../assets/utils'
+import { handleClick } from '../assets/utils'
 import Typewriter from 'typewriter-effect'
 import data from '../assets/data'
 
@@ -16,11 +16,11 @@ const HeroSection = () => {
         }}
       />
       <div id='hero__btn__wrapper' className='hero__btn__wrapper' key='hero__btn__wrapper'>
-        <button type='button' className='hero__btn btn' onClick={call}>
+        <button type='button' className='hero__btn btn' onClick={() => handleClick('call')}>
           <ion-icon name='call-outline' />
           <p className='hero__btn__text'>Llama ahora</p>
         </button>
-        <button type='button' className='hero__btn btn btn--white' onClick={openCalendar}>
+        <button type='button' className='hero__btn btn btn--white' onClick={() => handleClick('calendar')}>
           <ion-icon name='calendar-number-outline' />
           <p className='hero__btn__text'>Agenda una clase gratis</p>
         </button>

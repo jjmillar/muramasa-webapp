@@ -1,23 +1,12 @@
 import data from './data'
 
-const openInsta = () => {
-  window.open(data.instagram, '_blank')
-}
-const call = () => {
-  window.location.href = `tel:${data.phone}`
-}
-
-const whatsapp = () => {
-  window.open(`https://wa.me/${data.phone}`, '_blank')
-}
-
-const openCalendar = () => {
-  window.open(data.calendar, '_blank')
+const handleClick = (e) => {
+  if (e === 'instagram') { window.open(data.instagram, '_blank') }
+  if (e === 'calendar') { window.open(data.calendar, '_blank') }
+  if (e === 'whatsapp') { window.open(`https://wa.me/${data.phone}`, '_blank') }
+  if (e === 'call') { window.location.href = `tel:${data.phone}` }
 }
 
 export {
-  openInsta,
-  call,
-  whatsapp,
-  openCalendar
+  handleClick
 }

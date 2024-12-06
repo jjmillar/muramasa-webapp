@@ -1,4 +1,4 @@
-import { call } from '../assets/utils'
+import { handleClick } from '../assets/utils'
 
 const ContactUs = () => {
   return (
@@ -8,7 +8,7 @@ const ContactUs = () => {
         <ion-icon name='map-outline' />
         <p>José Manso de Velasco 474, Los Ángeles.</p>
         <ion-icon name='call-outline' />
-        <button type='button' className='contact-us__btn' onClick={call}>+56 9 7215 1199</button>
+        <button type='button' className='contact-us__btn' onClick={() => handleClick('call')}>+56 9 7215 1199</button>
       </div>
     </section>
   )
