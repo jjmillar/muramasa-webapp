@@ -87,3 +87,7 @@ img, picture, svg, video {
 body {
   min-height: 100dvh;
 }
+
+::-webkit-scrollbar { 
+  display: none;
+}
