@@ -73,6 +73,7 @@ header {
 }
 
 .schedule__wrapper {
+  margin: var(--padding-top-bottom) 0;
   padding: var(--padding-top-bottom) 0;
   text-align: center;
   display: grid;
@@ -92,6 +93,7 @@ header {
 }
 
 .contact-us__wrapper {
+  margin: var(--padding-top-bottom) 0;
   padding: var(--padding-top-bottom);
   text-align: center;
 
