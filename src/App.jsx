@@ -6,6 +6,7 @@ import Programs from './components/programs'
 import Ready from './components/ready'
 import Schedule from './components/schedule'
 import ContactUs from './components/contact-us'
+import Map from './components/map'
 import './App.css'
 
 function App () {
@@ -19,6 +20,7 @@ function App () {
         <Ready />
         <Schedule />
         <ContactUs />
+        <Map />
       </main>
       <Navbar />
       <footer id='footer' className='footer' key='footer'>©2024 JJ Studio. Todos los derechos reservados.</footer>

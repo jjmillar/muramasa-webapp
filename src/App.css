@@ -119,6 +119,13 @@ header {
   }
 }
 
+.map__map {
+  margin: var(--padding-top-bottom) auto;
+  width: 100%;
+  height: 50svh;
+  border: none;
+}
+
 nav {
   margin: var(--padding-top-bottom) 0;
   width: 100%;
@@ -144,6 +151,7 @@ nav {
 }
 
 footer {
+  padding-top: var(--padding-top-bottom);
   text-align: center;
 }
 
@@ -159,7 +167,8 @@ footer {
     grid-template-areas: 'hero carousel'
                          'programs programs'
                          'ready ready'
-                         'schedule contact-us';
+                         'schedule contact-us'
+                         'map map';
 
     & .hero {
       grid-area: hero;
@@ -200,6 +209,15 @@ footer {
 
     & .contact-us {
       grid-area: contact-us;
+    }
+
+    & .map {
+      grid-area: map;
+      justify-self: center;
+
+      & .map__map {
+        width: 70dvw;
+      }
     }
   }
 
