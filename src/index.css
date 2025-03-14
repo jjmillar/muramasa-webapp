@@ -50,6 +50,7 @@ button {
   background: var(--clr-secondary);
   color: var(--clr-text);
   font-size: calc(var(--p-font-size) * 0.9);
+  font-weight: bold;
 }
 
 .btn--white {
