@@ -1,28 +1,6 @@
-const images = [
-  {
-    id: '1',
-    image: '1.webp'
-  },
-  {
-    id: '2',
-    image: '2.webp'
-  },
-  {
-    id: '3',
-    image: '3.webp'
-  },
-  {
-    id: '4',
-    image: '4.webp'
-  },
-  {
-    id: '5',
-    image: '5.webp'
-  },
-  {
-    id: '6',
-    image: '6.webp'
-  }
-]
+const images = Object.entries(import.meta.glob('../../public/*.webp')).map(([path], index) => ({
+  id: `${index + 1}`,
+  image: path.replace('../../public/', '')
+}));
 
-export default images
+export default images;
