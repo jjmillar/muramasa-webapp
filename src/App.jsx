@@ -20,7 +20,7 @@ function App () {
         <Ready />
         <Schedule />
         <ContactUs />
-        <Map />
+        {/*<Map />*/}
       </main>
       <Navbar />
       <footer id='footer' className='footer' key='footer'>©2024 JJ Studio. Todos los derechos reservados.</footer>
