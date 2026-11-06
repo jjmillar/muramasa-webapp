@@ -1,6 +1,6 @@
 import Header from './components/header'
 import HeroSection from './components/hero'
-import PhotoCarousel from './components/photoCarousel'
+import Gallery from './components/photoCarousel'
 import Navbar from './components/navbar'
 import Programs from './components/programs'
 import Ready from './components/ready'
@@ -13,11 +13,9 @@ function App () {
     <>
       <Header />
       <main id='main' className='main'>
-        <div className='intro container'>
-          <HeroSection />
-          <PhotoCarousel />
-        </div>
+        <HeroSection />
         <Programs />
+        <Gallery />
         <Ready />
         <div className='info container'>
           <Schedule />
@@ -25,7 +23,10 @@ function App () {
         </div>
       </main>
       <Navbar />
-      <footer id='footer' className='footer'>©2024 JJ Studio. Todos los derechos reservados.</footer>
+      <footer id='footer' className='footer'>
+        <img src='/muramasa-logo.png' alt='' width='40' height='40' loading='lazy' />
+        <p>©2024 JJ Studio. Todos los derechos reservados.</p>
+      </footer>
     </>
   )
 }
