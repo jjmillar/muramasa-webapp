@@ -1,69 +1,32 @@
-/* Variables */
+/* Tokens: tinta sumi, papel washi y un solo acento bermellón (sello hanko) */
 
 :root {
-  --p-font-size: clamp(1.2rem, 5vw, 1.5rem);
-  --border-radius: 15px;
-  --padding-top-bottom: 1rem;
-  --gap: 1rem;
+  --ink: #121110;
+  --ink-2: #1b1a18;
+  --line: #2e2c29;
+  --washi: #f2eee6;
+  --mist: #a9a49b;
+  --shu: #c2391f;
+  --shu-hover: #d4452a;
+  --shu-press: #a93119;
 
-  --clr-bg: hsl(210, 11%, 8%);
-  --clr-secondary: hsl(210, 11%, 16%);
-  --clr-text: hsl(210, 17%, 98%);
-}
+  --radius: 6px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --section-space: clamp(3.5rem, 9vw, 7rem);
+  --container: 1120px;
+  --dock-height: 64px;
 
-/* Global styles */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 
-body {
-  font-family: poppins, sans-serif;
-  padding: 0.5rem;
-  background: var(--clr-bg);
-  color: var(--clr-text);
-}
-
-h1 {
-  font-size: clamp(2.2rem, 5vw, 3rem);
-  font-weight: bold;
-}
-
-h2 {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  font-weight: bold;
-  padding: var(--padding-top-bottom) 0;
-  text-align: center;
-}
-
-button {
-  cursor: pointer;
-}
-
-/* UTILITY CLASSES */
-
-.card {
-  background: var(--clr-secondary);
-  border-radius: var(--border-radius);
-}
-
-.btn {
-  padding: calc(var(--padding-top-bottom) *0.7);
-  border: none;
-  border-radius: var(--border-radius);
-  background: var(--clr-secondary);
-  color: var(--clr-text);
-  font-size: calc(var(--p-font-size) * 0.9);
-  font-weight: bold;
-}
-
-.btn--white {
-  background: var(--clr-text);
-  color: var(--clr-bg);
+  color-scheme: dark;
 }
 
 /* CSS RESET */
+
 *, *::before, *::after {
   box-sizing: border-box;
   position: relative;
   min-width: 0;
- /*outline: 1px solid lime;*/
 }
 
 * {
@@ -80,15 +43,138 @@ p {
   text-wrap: pretty;
 }
 
+ul, ol {
+  list-style: none;
+}
+
 img, picture, svg, video {
   display: block;
   max-width: 100%;
 }
 
-body {
-  min-height: 100dvh;
+/* Global styles */
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) var(--ink);
 }
 
-::-webkit-scrollbar { 
-  display: none;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  min-height: 100dvh;
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background: var(--ink);
+  color: var(--washi);
+  caret-color: var(--shu);
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--shu);
+  color: var(--washi);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--shu);
+  outline-offset: 3px;
+  border-radius: var(--radius);
+}
+
+/* UTILITY CLASSES */
+
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.4rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  transition:
+    background-color 200ms var(--ease-out),
+    border-color 200ms var(--ease-out),
+    transform 200ms var(--ease-out);
+
+  & ion-icon {
+    font-size: 1.2em;
+    flex-shrink: 0;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.btn--primary {
+  background: var(--shu);
+  color: var(--washi);
+
+  &:hover {
+    background: var(--shu-hover);
+  }
+
+  &:active {
+    background: var(--shu-press);
+  }
+}
+
+.btn--ghost {
+  border-color: var(--line);
+  color: var(--washi);
+
+  &:hover {
+    border-color: var(--mist);
+  }
+
+  &:active {
+    background: var(--ink-2);
+  }
+}
+
+.btn--compact {
+  padding: 0.6rem 1rem;
+  font-size: 0.9375rem;
 }

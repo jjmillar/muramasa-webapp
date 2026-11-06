@@ -2,14 +2,18 @@ import { handleClick } from '../assets/utils'
 
 const ContactUs = () => {
   return (
-    <section id='contact-us' key='contact-us' className='contact-us'>
+    <section id='contact-us' className='contact-us section'>
       <h2>Contáctanos</h2>
-      <div id='contact-us__wrapper' className='contact-us__wrapper card' key='contact-us__wrapper'>
-        <ion-icon name='map-outline' />
-        <p>José Manso de Velasco 474, Los Ángeles.</p>
-        <ion-icon name='call-outline' />
-        <button type='button' className='contact-us__btn' onClick={() => handleClick('call')}>+56 9 7215 1199</button>
-      </div>
+      <ul id='contact-us__wrapper' className='rows'>
+        <li className='row'>
+          <ion-icon name='map-outline' aria-hidden='true' />
+          <p>José Manso de Velasco 474, Los Ángeles.</p>
+        </li>
+        <li className='row'>
+          <ion-icon name='call-outline' aria-hidden='true' />
+          <button type='button' className='contact-us__btn' onClick={() => handleClick('call')}>+56 9 7215 1199</button>
+        </li>
+      </ul>
     </section>
   )
 }

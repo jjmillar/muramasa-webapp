@@ -1,24 +1,25 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Autoplay } from 'swiper/modules'
+import { Autoplay, Pagination, A11y } from 'swiper/modules'
 
 import images from '../assets/images'
 import 'swiper/css'
-import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
 const PhotoCarousel = () => {
   return (
-    <section id='carousel' className='carousel' key='carousel'>
+    <section id='carousel' className='carousel' aria-label='Fotos de Muramasa BJJ'>
       <Swiper
+        loop
         autoplay={{
-          delay: 2500,
+          delay: 3500,
           disableOnInteraction: true
         }}
-        modules={[Navigation, Autoplay]}
-        className='mySwiper swiper-container'
+        pagination={{ clickable: true }}
+        modules={[Autoplay, Pagination, A11y]}
       >
         {images.map((i, index) => (
-          <SwiperSlide className='swiper-slide' key={i.id}>
-            <img src={i.image} alt='foto muramasa bjj los angeles' decoding='async' loading={index === 0 ? undefined : 'lazy'} />
+          <SwiperSlide key={i.id}>
+            <img src={i.image} alt='foto muramasa bjj los angeles' width='960' height='960' decoding='async' loading={index === 0 ? undefined : 'lazy'} />
           </SwiperSlide>
         ))}
       </Swiper>

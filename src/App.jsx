@@ -12,16 +12,20 @@ function App () {
   return (
     <>
       <Header />
-      <main id='main' className='main' key='main'>
-        <HeroSection />
-        <PhotoCarousel />
+      <main id='main' className='main'>
+        <div className='intro container'>
+          <HeroSection />
+          <PhotoCarousel />
+        </div>
         <Programs />
         <Ready />
-        <Schedule />
-        <ContactUs />
+        <div className='info container'>
+          <Schedule />
+          <ContactUs />
+        </div>
       </main>
       <Navbar />
-      <footer id='footer' className='footer' key='footer'>©2024 JJ Studio. Todos los derechos reservados.</footer>
+      <footer id='footer' className='footer'>©2024 JJ Studio. Todos los derechos reservados.</footer>
     </>
   )
 }
