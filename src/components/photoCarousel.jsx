@@ -16,9 +16,9 @@ const PhotoCarousel = () => {
         modules={[Navigation, Autoplay]}
         className='mySwiper swiper-container'
       >
-        {images.map((i) => (
+        {images.map((i, index) => (
           <SwiperSlide className='swiper-slide' key={i.id}>
-            <img src={i.image} alt='foto muramasa bjj los angeles' />
+            <img src={i.image} alt='foto muramasa bjj los angeles' decoding='async' loading={index === 0 ? undefined : 'lazy'} />
           </SwiperSlide>
         ))}
       </Swiper>
