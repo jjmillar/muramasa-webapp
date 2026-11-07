@@ -24,8 +24,7 @@ function App () {
       </main>
       <Navbar />
       <footer id='footer' className='footer'>
-        <img src='/muramasa-logo.png' alt='' width='40' height='40' loading='lazy' />
-        <p>©2024 JJ Studio. Todos los derechos reservados.</p>
+        <p>© 2026 JJ Studio. Todos los derechos reservados.</p>
       </footer>
     </>
   )
