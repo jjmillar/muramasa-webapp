@@ -145,7 +145,7 @@
 @keyframes settle {
   from {
     opacity: 0;
-    transform: scale(1.06);
+    scale: 1.06;
   }
 }
 
@@ -549,4 +549,67 @@ body {
     min-width: 96px;
     border-radius: var(--radius);
   }
+}
+
+/* Parallax al hacer scroll (CSS puro, scroll-driven animations).
+   Navegadores sin soporte simplemente ven la página estática. */
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .hero__media img {
+      position: absolute;
+      inset: -20% 0 auto 0;
+      height: 120%;
+      animation: settle 1600ms var(--ease-out) both, hero-drift linear both;
+      animation-timeline: auto, scroll(root);
+      animation-range: normal, 0 100vh;
+    }
+
+    .hero__content {
+      animation: hero-lift linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 90vh;
+    }
+
+    .section h2,
+    .programs__item,
+    .ready__p,
+    .ready__btn,
+    .row {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) and (width >= 768px) {
+    .gallery__item img {
+      scale: 1.14;
+      animation: photo-drift linear both;
+      animation-timeline: view();
+    }
+  }
+}
+
+@keyframes hero-drift {
+  to { translate: 0 15%; }
+}
+
+@keyframes hero-lift {
+  to {
+    translate: 0 -48px;
+    opacity: 0.3;
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    translate: 0 32px;
+  }
+}
+
+@keyframes photo-drift {
+  from { translate: 0 -6%; }
+  to { translate: 0 6%; }
 }
