@@ -608,7 +608,7 @@ body {
     .row {
       animation: reveal linear both;
       animation-timeline: view();
-      animation-range: entry 0% entry 100%;
+      animation-range: entry 0% entry 200px;
     }
 
     /* Banda final: foto de fondo con parallax fuerte */
