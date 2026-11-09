@@ -8,7 +8,7 @@ const Header = () => {
           <img src='/muramasa-logo.png' alt='' width='40' height='40' />
           <h1>Muramasa Brazilian Jiujitsu</h1>
         </a>
-        <button type='button' className='header__cta btn btn--primary btn--compact' onClick={() => handleClick('calendar')}>
+        <button type='button' className='header__cta btn btn--compact' onClick={() => handleClick('calendar')}>
           Agenda una clase gratis
         </button>
       </div>

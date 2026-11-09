@@ -1,21 +1,24 @@
-/* Tokens: tinta sumi, papel washi y un solo acento bermellón (sello hanko) */
+/* Tokens: grafito neutro, texto casi blanco y un solo acento bermellón (sello hanko) */
 
 :root {
-  --ink: #121110;
-  --ink-2: #1b1a18;
-  --line: #2e2c29;
-  --washi: #f2eee6;
-  --mist: #a9a49b;
-  --shu: #c2391f;
-  --shu-hover: #d4452a;
-  --shu-press: #a93119;
+  --ink: #19191c;
+  --ink-2: #212125;
+  --ink-3: #2b2b30;
+  --line: #323236;
+  --washi: #f4f4f7;
+  --mist: #bababf;
+  --shu: #e0492c;
+  --on-photo: #f4f4f7;
 
-  --radius: 6px;
-  --gutter: clamp(16px, 4vw, 40px);
-  --section-space: clamp(3.5rem, 9vw, 7rem);
-  --container: 1120px;
+  --radius: 5px;
+  --radius-tile: 12px;
+  --gap: clamp(8px, 1vw, 12px);
+  --gutter: clamp(16px, 3vw, 32px);
+  --section-space: clamp(4.5rem, 10vw, 8rem);
+  --container: 1216px;
   --dock-height: 64px;
 
+  --ease: cubic-bezier(0.42, 0, 0.58, 1);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 
   color-scheme: dark;
@@ -67,7 +70,7 @@ html {
 
 body {
   min-height: 100dvh;
-  font-family: 'Poppins', system-ui, sans-serif;
+  font-family: 'Archivo', system-ui, sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   background: var(--ink);
@@ -84,7 +87,7 @@ body {
 }
 
 h2 {
-  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-size: clamp(2.25rem, 4.4vw, 3.5rem);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -126,55 +129,57 @@ button {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.9rem 1.4rem;
+  min-height: 48px;
+  padding: 0.75rem 1.25rem;
   border: 1px solid transparent;
   border-radius: var(--radius);
+  background: var(--on-photo);
+  color: #19191c;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.2;
   text-decoration: none;
-  transition:
-    background-color 200ms var(--ease-out),
-    border-color 200ms var(--ease-out),
-    transform 200ms var(--ease-out);
-
-  & ion-icon {
-    font-size: 1.2em;
-    flex-shrink: 0;
-  }
-
-  &:active {
-    transform: translateY(1px);
-  }
-}
-
-.btn--primary {
-  background: var(--shu);
-  color: var(--washi);
+  transition: background-color 300ms var(--ease), border-color 300ms var(--ease), scale 200ms var(--ease-out);
 
   &:hover {
-    background: var(--shu-hover);
+    background: #d4d4da;
   }
 
   &:active {
-    background: var(--shu-press);
+    scale: 0.98;
   }
 }
 
 .btn--ghost {
-  border-color: var(--line);
-  color: var(--washi);
+  border-color: rgb(244 244 247 / 0.35);
+  background: none;
+  color: var(--on-photo);
 
   &:hover {
-    border-color: var(--mist);
-  }
-
-  &:active {
-    background: var(--ink-2);
+    border-color: var(--on-photo);
+    background: none;
   }
 }
 
 .btn--compact {
-  padding: 0.6rem 1rem;
+  min-height: 44px;
+  padding: 0.5rem 0.875rem;
   font-size: 0.9375rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+
+  &::before {
+    content: '';
+    flex: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--shu);
+  }
 }

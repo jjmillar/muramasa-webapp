@@ -8,25 +8,18 @@ const HeroSection = () => {
         <img src='/3.webp' alt='' width='960' height='960' />
       </div>
       <div className='hero__content container'>
-        <img className='hero__logo' src='/muramasa-logo.png' alt='Muramasa' width='160' height='160' />
+        <p className='eyebrow'>Academia en Los Ángeles, Chile</p>
         <h2 className='hero__title' id='hero__title'>Descubre el poder del Jiujitsu Brasileño</h2>
-        <blockquote className='hero__quote'>
-          <p>{data.heroText}</p>
-        </blockquote>
+        <p className='hero__quote'>{data.heroText}</p>
         <div id='hero__btn__wrapper' className='hero__btn__wrapper'>
-          <button type='button' className='hero__btn btn btn--primary' onClick={() => handleClick('calendar')}>
-            <ion-icon name='calendar-number-outline' aria-hidden='true' />
+          <button type='button' className='hero__btn btn' onClick={() => handleClick('calendar')}>
             Agenda una clase gratis
           </button>
           <button type='button' className='hero__btn btn btn--ghost' onClick={() => handleClick('call')}>
-            <ion-icon name='call-outline' aria-hidden='true' />
             Llama ahora
           </button>
         </div>
-        <p className='hero__when'>
-          <ion-icon name='time-outline' aria-hidden='true' />
-          Lunes, Miércoles y Viernes · 20:00 - 22:00
-        </p>
+        <p className='hero__when'>Lunes, Miércoles y Viernes · 20:00 - 22:00</p>
       </div>
     </section>
   )

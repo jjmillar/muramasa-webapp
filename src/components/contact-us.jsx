@@ -2,7 +2,7 @@ import { handleClick } from '../assets/utils'
 
 const ContactUs = () => {
   return (
-    <section id='contact-us' className='contact-us section'>
+    <section id='contact-us' className='contact-us section tile'>
       <h2>Contáctanos</h2>
       <ul id='contact-us__wrapper' className='rows'>
         <li className='row'>

@@ -2,7 +2,7 @@ const days = ['Lunes', 'Miércoles', 'Viernes']
 
 const Schedule = () => {
   return (
-    <section id='schedule' className='schedule section'>
+    <section id='schedule' className='schedule section tile'>
       <h2>Horario de Clases</h2>
       <dl id='schedule__wrapper' className='rows'>
         {days.map((day) => (
